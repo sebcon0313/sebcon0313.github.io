@@ -1,0 +1,569 @@
+:root{
+  --color: rgba(219,144,.5);
+  --color2: rgba(23,180,83,.0788);
+  --color3: rgba(11,194,211,0.623);
+  --fondo: #fff;
+  --titulos: 33px;
+  --margenes: 65px;
+  --espacios: 10px;
+  --espacios-contenido: 30px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'open sans';
+    background:  var(--fondo);
+}
+
+img{
+  vertical-align: top;
+}
+
+/* Preloader */
+.hidden{
+  overflow: hidden;
+}
+
+.centrado{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #cef;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+
+  /*Header*/
+header{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, 
+  rgba(211,135,20,.6),
+  rgba(29,241,171,.6),
+  rgba(7,109,150,.45)
+  ), url(img/header.jpg);  
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+nav{
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
+  
+.nav1{
+  background: transparent;
+  height: 80px;
+  color: #fff;
+  z-index: 100;
+}
+
+.nav2{
+  background: var(--fondo);
+  height: 100px;
+  color: #000;
+  z-index: 100;
+}
+
+.container-nav{
+  display: flex;
+  margin: auto;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  height: inherit;
+  overflow: hidden;
+}
+
+.span-{
+  color: red;
+}
+.span-logo{
+  color: #1498a4;
+  font-size: 25px;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+nav .enlaces a{
+  display: inline-block;
+  padding: 5px;
+  margin-right: 17px;
+  font-size: 17px;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  color: inherit;
+}
+
+nav .enlaces a:hover{
+  border-bottom: 3px solid #1498a4;
+  transition: 0.6s;
+}
+
+.icono{
+  display: none;
+  font-size: 24px;
+  padding: 23.5px 20px;
+}
+
+.textos{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+}
+
+.textos>h1{
+  font-size: 80px;
+}
+
+.textos>h2{
+  font-size: 30px;
+  font-weight: 300;
+}
+
+/* Main*/
+
+.contenedor{
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contenedor h3{
+  font-size: var(--titulos);
+  color: var(--color);
+  margin-bottom: var(--espacios);
+}
+
+.contenedor p {
+  font-size: var(--subtitulos);
+  font-weight: 300;
+  color: var(--color);
+}
+
+.after::after{
+  content: '';
+  display: block;
+  margin: auto;
+  margin-top: var(--espacios);
+  width: 100px;
+  height: 4px;
+  background: var(--color);
+  margin-bottom: var(--espacios-contenido);
+}
+
+/* Sobre MI*/
+.team{
+  padding: var(--margenes) 0;
+}
+.contenedor-sobreMi{
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center;
+  padding-bottom: 50px; */
+  margin: auto;
+}
+
+.textos-sobreMi{
+  width: 45%;
+}
+.textos-cont{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.img-sobreMi{
+  width: 30%;
+}
+.img-sobreMi img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.textos-sobreMi h3{
+  width: 60%;
+  font-size: 30px;
+}
+
+.textos-sobreMi p{
+  font-size: 18px;
+  color: #000;
+  padding-bottom: 35px;
+}
+
+.textos-sobreMi a{
+  text-decoration: none;
+  background: var(--color);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.habilidades{
+  width: 40%;
+  text-align: center;
+}
+.habilidades h3{
+  font-size: 25px;
+}
+
+.p-habilidades{
+  margin-bottom: 25px;
+}
+
+.lenguajes{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.card-leng{
+  width: 90px;
+  height: 90px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  margin: 10px;
+  padding: 10px;
+}
+.card-leng img{
+  height: 40px;
+  margin-bottom: 10px;
+}
+.lenguajes p{
+  font-size: 15px;
+  color: #000;
+  background: #fff;
+  /* box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5); */
+}
+/* Servicio */
+
+.about{
+  background: linear-gradient(to bottom, 
+  rgba(0,0,0,.7),
+  rgba(0,0,0,.7)
+  ), url(img/teclado.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  padding: var(--margenes) 0;
+}
+.about .after{
+  margin-bottom: 60px;
+}
+.servicios{
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.caja-servicios{
+  width: 30%;
+}
+
+.caja-servicios>h4{
+  margin-bottom: var(--espacios);
+}
+
+.caja-servicios>p{
+  text-align: center;
+}
+
+/* Trabajos */
+.work {
+  padding: var(--margenes) 0;
+}
+
+.botones-work{
+  overflow: hidden;
+}
+
+.botones-work li{
+  display: inline-block;
+  text-align: center;
+  margin-left: var(--espacios);
+  margin-bottom: var(--espacios-contenido);
+  padding: 6px 12px;
+  border: 1px solid var(--color);
+  list-style: none;
+  color: var(--color);
+}
+
+.botones-work li:hover{
+  background: var(--color);
+  color: #fff;
+  cursor: pointer;
+}
+
+.botones-work .active{
+  background: var(--color);
+  color: #fff;
+}
+
+.galeria-work{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.galeria-work .cont-work{
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: var(--espacios-contenido);
+}
+
+.img-work{
+  height: 90%;
+  width: 100%;
+}
+
+.img-work img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.textos-work{
+  height: 10%;
+}
+
+.textos-work h4{
+  line-height: 30px;
+  font-weight: 300;
+}
+
+/* footer */
+
+footer{
+  background: linear-gradient(to bottom, 
+  rgba(0,0,0,.6),
+  rgba(0,0,0,.6)
+  ), url(img/teclado.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  padding: var(--margenes) 0;
+}
+
+.footer h1{
+  font-size: 50px;
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  /* font-family: 'Encode Sans SC', sans-serif; */
+  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer span{
+  font-size: 45px;
+}
+
+.iconos{
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.fab{
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: var(--espacios);
+  display: inline-block;
+  position: relative;
+}
+
+footer p{
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 700px) {
+  .nav2{
+    color: #fff;
+  }
+
+  .icono{
+    display: block;
+    cursor: pointer;
+  }
+
+  .enlaces{
+    position: fixed;
+    top: 80px;
+    background:  #2c3350;
+    left: 0;
+    height: 100%;
+    transition: 1s;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .enlaces a{
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #34495e;
+    color: #fff;
+  }
+
+  .textos>h1{
+    font-size: 50px;
+  }
+
+  .textos>h2{
+    font-size: 30px;
+  }
+
+  .contenedor-sobreMi{
+    flex-direction: column;
+  }
+  .textos-sobreMi{
+    width: 100%;
+    padding: var(--margenes) 0;
+  }
+  .habilidades{
+    width: 100%;}
+
+  .galeria-work .cont-work{
+    width: 45%;
+  }
+
+  :root {
+    --margenes: 30px;
+  }  
+}
+
+@media screen and (max-width: 500px){
+  :root{
+    --espacios-contenido: 25px;
+  }
+
+  .textos>h1{
+    font-size: 40px;
+  }
+  
+  .textos>h2{
+    font-size: 25px;
+  }
+
+  .textos-sobreMi h3{
+    font-size: 25px;
+  }
+  .textos-sobreMi p{
+    font-size: 20px;
+  }
+  .habilidades{
+    padding: var(--margenes) 0;
+  }
+  .servicios{
+    justify-content: center;
+  }
+  .caja-servicios{
+    width: 90%;
+    margin-bottom: var(--margenes);
+
+  }
+
+  
+  .cont-work{
+    width: 85%;
+  }
+
+  /* .icono{
+    margin: auto;
+  } */
+}
+
+@media screen and (max-width: 400px) {
+  .textos>h1{
+    font-size: 30px;
+  }
+  
+  .textos>h2{
+    font-size: 20px;
+  }
+
+  .textos-sobreMi h3{
+    font-size: 20px;
+  }
+  .textos-sobreMi p{
+    font-size: 15px;
+  }
+  .textos-sobreMi img{
+    width: 100px;
+    height: 100px;
+  }
+
+  .galeria-work .cont-work{
+    width: 80%;
+  }
+  
+}
